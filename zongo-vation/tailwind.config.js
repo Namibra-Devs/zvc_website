@@ -18,11 +18,6 @@ export default {
         sans: ['Inter', 'system-ui', 'sans-serif'],
         serif: ['Playfair Display', 'serif'],
       },
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'islamic-pattern': "url('data:image/svg+xml,...')" // Add your pattern
-      }
     },
   },
-  plugins: [],
 }

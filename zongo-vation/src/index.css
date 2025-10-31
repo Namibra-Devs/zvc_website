@@ -1,8 +1,16 @@
 @import "tailwindcss";
+
+@theme {
+  --color-primary-gold: #D4AF37;
+  --color-primary-emerald: #046307;
+  --color-primary-dark: #1a1a1a;
+  --color-primary-light: #f8f9fa;
+  
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-serif: 'Playfair Display', serif;
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 
 @layer base {
   html {
@@ -10,32 +18,68 @@
   }
   
   body {
-    font-family: 'Inter', sans-serif;
+    font-family: var(--font-sans);
   }
   
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Playfair Display', serif;
+    font-family: var(--font-serif);
   }
 }
 
 @layer components {
   .btn-primary {
-    @apply bg-primary-gold text-primary-emerald font-semibold py-3 px-6 rounded-lg hover:bg-opacity-90 transition-all duration-300 transform hover:scale-105;
+    background-color: var(--color-primary-gold);
+    color: var(--color-primary-emerald);
+    font-weight: 600;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    transition: all 0.3s;
+    
+    &:hover {
+      opacity: 0.9;
+      transform: scale(1.05);
+    }
   }
   
   .btn-secondary {
-    @apply bg-transparent border-2 border-primary-gold text-primary-gold font-semibold py-3 px-6 rounded-lg hover:bg-primary-gold hover:text-white transition-all duration-300;
+    background-color: transparent;
+    border: 2px solid var(--color-primary-gold);
+    color: var(--color-primary-gold);
+    font-weight: 600;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    transition: all 0.3s;
+    
+    &:hover {
+      background-color: var(--color-primary-gold);
+      color: white;
+    }
   }
   
   .section-padding {
-    @apply py-16 px-4 sm:px-6 lg:px-8;
+    padding: 4rem 1rem;
+    
+    @media (min-width: 640px) {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+    
+    @media (min-width: 1024px) {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
   }
   
   .container-custom {
-    @apply max-w-7xl mx-auto;
+    max-width: 80rem;
+    margin-left: auto;
+    margin-right: auto;
   }
   
   .text-gradient {
-    @apply bg-gradient-to-r from-primary-gold to-primary-emerald bg-clip-text text-transparent;
+    background: linear-gradient(135deg, var(--color-primary-gold) 0%, var(--color-primary-emerald) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
   }
 }

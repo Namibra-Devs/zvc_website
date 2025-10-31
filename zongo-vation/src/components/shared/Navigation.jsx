@@ -1,8 +1,8 @@
-import React from 'react'
-import { Link, useLocation } from 'react-router-dom'
+import React from 'react';
+import { Link, useLocation } from 'react-router-dom';
 
 const Navigation = ({ mobile, onNavigate }) => {
-  const location = useLocation()
+  const location = useLocation();
   
   const navItems = [
     { path: '/', label: 'Home' },
@@ -12,17 +12,17 @@ const Navigation = ({ mobile, onNavigate }) => {
     { path: '/investors', label: 'Investors' },
     { path: '/partnerships', label: 'Partnerships' },
     { path: '/contact', label: 'Contact' }
-  ]
+  ];
 
   const baseClasses = mobile 
     ? "block py-2 px-4 text-lg font-medium hover:text-primary-gold transition-colors"
-    : "text-gray-700 hover:text-primary-gold font-medium transition-colors"
+    : "text-gray-700 hover:text-primary-gold font-medium transition-colors";
 
-  const activeClasses = "text-primary-gold"
+  const activeClasses = "text-primary-gold";
 
   const handleClick = () => {
-    if (onNavigate) onNavigate()
-  }
+    if (onNavigate) onNavigate();
+  };
 
   return (
     <>
@@ -39,7 +39,7 @@ const Navigation = ({ mobile, onNavigate }) => {
         </Link>
       ))}
     </>
-  )
-}
+  );
+};
 
-export default Navigation
+export default Navigation;

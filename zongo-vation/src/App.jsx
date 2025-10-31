@@ -1,13 +1,13 @@
-import React from 'react'
-import { Routes, Route } from 'react-router-dom'
-import Layout from '@components/layout/Layout'
-import Home from '@pages/Home'
-import About from '@pages/About'
-import Projects from '@pages/Projects'
-import Services from '@pages/Services'
-import Investors from '@pages/Investors'
-import Partnerships from '@pages/Partnerships'
-import Contact from '@pages/Contact'
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
+import Layout from '@components/layout/Layout';
+import Home from '@pages/Home';
+import About from '@pages/About';
+import Projects from '@pages/Projects';
+import Services from '@pages/Services';
+import Investors from '@pages/Investors';
+import Partnerships from '@pages/Partnerships';
+import Contact from '@pages/Contact';
 
 function App() {
   return (
@@ -22,7 +22,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
       </Routes>
     </Layout>
-  )
+  );
 }
 
-export default App
+export default App;
