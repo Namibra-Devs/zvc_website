@@ -9,7 +9,7 @@ export default {
       colors: {
         primary: {
           gold: '#D4AF37',
-          emerald: '#046307',
+         blue: '#0e2148',
           dark: '#1a1a1a',
           light: '#f8f9fa'
         }

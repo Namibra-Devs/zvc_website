@@ -2,7 +2,7 @@
 
 @theme {
   --color-primary-gold: #D4AF37;
-  --color-primary-emerald: #046307;
+  --color-primary-blue: #0e2148;
   --color-primary-dark: #1a1a1a;
   --color-primary-light: #f8f9fa;
   
@@ -28,58 +28,46 @@
 
 @layer components {
   .btn-primary {
-    background-color: var(--color-primary-gold);
-    color: var(--color-primary-emerald);
-    font-weight: 600;
-    padding: 0.75rem 1.5rem;
-    border-radius: 0.5rem;
-    transition: all 0.3s;
-    
-    &:hover {
-      opacity: 0.9;
-      transform: scale(1.05);
-    }
+    @apply bg-primary-gold text-primary-blue font-semibold py-3 px-6 rounded-xl hover:bg-primary-gold/90 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105;
   }
   
   .btn-secondary {
-    background-color: transparent;
-    border: 2px solid var(--color-primary-gold);
-    color: var(--color-primary-gold);
-    font-weight: 600;
-    padding: 0.75rem 1.5rem;
-    border-radius: 0.5rem;
-    transition: all 0.3s;
-    
-    &:hover {
-      background-color: var(--color-primary-gold);
-      color: white;
-    }
-  }
-  
-  .section-padding {
-    padding: 4rem 1rem;
-    
-    @media (min-width: 640px) {
-      padding-left: 1.5rem;
-      padding-right: 1.5rem;
-    }
-    
-    @media (min-width: 1024px) {
-      padding-left: 2rem;
-      padding-right: 2rem;
-    }
+    @apply bg-transparent border-2 border-primary-gold text-primary-gold font-semibold py-3 px-6 rounded-xl hover:bg-primary-gold hover:text-white transition-all duration-300 shadow-lg hover:shadow-xl;
   }
   
   .container-custom {
-    max-width: 80rem;
-    margin-left: auto;
-    margin-right: auto;
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
   }
-  
-  .text-gradient {
-    background: linear-gradient(135deg, var(--color-primary-gold) 0%, var(--color-primary-emerald) 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-  }
+}
+
+/* Enhanced glass morphism */
+.glass {
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+/* Smooth transitions */
+* {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #D4AF37;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #b8941f;
 }
