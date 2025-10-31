@@ -74,7 +74,7 @@ const Hero = () => {
       </div>
 
       {/* Content */}
-      <div className="relative text-left lg:text-center text-white z-10 px-4">
+      <div className="relative text-left lg:text-center text-white z-10 px-4 ">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
@@ -86,9 +86,9 @@ const Hero = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.4 }}
-            className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight"
+            className="text-3xl md:text-6xl lg:text-7xl font-bold mb-3 leading-tight mt-15 lg:mt-0 ms-4 lg:ms-0"
           >
-            <span className="bg-gradient-to-r from-primary-gold via-white to-primary-gold bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-primary-gold via-white to-primary-gold bg-clip-text text-transparent ">
               Building Africa's
             </span>
             <br />
@@ -102,7 +102,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.6 }}
-            className="text-xl md:text-2xl lg:text-3xl mb-8 max-w-4xl mx-auto font-light leading-relaxed"
+            className="text-xl md:text-2xl lg:text-3xl mb-4 max-w-4xl mx-auto font-light leading-relaxed ms-4 lg:ms-0"
           >
             Through <span className="bg-gradient-to-r from-primary-gold to-yellow-200 bg-clip-text text-transparent font-semibold">Ethical Islamic Finance</span> and Sustainable Infrastructure Development
           </motion.p>
@@ -112,7 +112,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.8 }}
-            className="text-lg md:text-xl mb-12 max-w-3xl mx-auto opacity-90 leading-relaxed"
+            className="text-lg md:text-xl mb-7 max-w-3xl mx-auto opacity-90 leading-relaxed ms-4 lg:ms-0"
           >
             ZongoVation Capital pioneers Shariah-compliant financial innovation across Africa — 
             connecting Middle Eastern ethical capital with transformative infrastructure projects 
@@ -124,7 +124,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 1 }}
-            className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16"
+            className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-13"
           >
             <Link 
               to="/projects/ghana-housing-sukuk" 
@@ -168,9 +168,9 @@ const Hero = () => {
             className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-12"
           >
             {[
-              { number: '$1B+', label: 'Capital to Mobilize' },
-              { number: '20K+', label: 'Homes to Build' },
-              { number: '10K+', label: 'Jobs to Create' },
+              { number: '$1M+', label: 'Capital to Mobilize' },
+              { number: '1K+', label: 'Homes to Build' },
+              { number: '3K+', label: 'Jobs to Create' },
               { number: '100%', label: 'Shariah Compliant' }
             ].map((stat, index) => (
               <div 
@@ -192,8 +192,8 @@ const Hero = () => {
       {/* Corner Accents */}
       <div className="absolute top-8 left-8 w-4 h-4 border-t-2 border-l-2 border-primary-gold/50" />
       <div className="absolute top-8 right-8 w-4 h-4 border-t-2 border-r-2 border-primary-gold/50" />
-      <div className="absolute bottom-8 left-8 w-4 h-4 border-b-2 border-l-2 border-primary-gold/50" />
-      <div className="absolute bottom-8 right-8 w-4 h-4 border-b-2 border-r-2 border-primary-gold/50" />
+      <div className="absolute bottom-6 left-8 w-4 h-4 border-b-2 border-l-2 border-primary-gold/50" />
+      <div className="absolute bottom-6 right-8 w-4 h-4 border-b-2 border-r-2 border-primary-gold/50" />
     </section>
   );
 };
