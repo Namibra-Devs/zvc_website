@@ -217,22 +217,6 @@ const Contact = () => {
           </motion.div>
         </div>
 
-        {/* Quick Actions */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          className="text-center mt-16"
-        >
-          <p className="text-gray-600 mb-6">Looking for something else?</p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <button className="px-6 py-3 border border-primary-blue text-primary-blue rounded-xl hover:bg-primary-blue hover:text-white transition-all duration-300">
-              Download Company Profile
-            </button>
-            <button className="px-6 py-3 border border-primary-gold text-primary-gold rounded-xl hover:bg-primary-gold hover:text-white transition-all duration-300">
-              Schedule a Meeting
-            </button>
-          </div>
-        </motion.div>
       </div>
     </section>
   );

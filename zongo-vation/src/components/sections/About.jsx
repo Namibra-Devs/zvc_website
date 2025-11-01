@@ -186,7 +186,7 @@ const About = () => {
             className="relative rounded-3xl overflow-hidden shadow-xl"
           >
             <img
-              src="/images/about.jpg"
+              src="/images/sustain.jpg"
               alt="ZongoVation Capital"
               className="w-full h-full object-cover rounded-3xl"
             />

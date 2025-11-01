@@ -239,40 +239,7 @@ const Partnerships = () => {
           </div>
         </motion.div>
 
-        {/* CTA Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.9 }}
-          className="text-center"
-        >
-          <div className="bg-white border border-gray-200 rounded-3xl p-8 max-w-2xl mx-auto mb-8">
-            <Sparkles className="w-12 h-12 text-primary-gold mx-auto mb-4" />
-            <h3 className="text-2xl font-bold text-primary-blue mb-4">
-              Ready to Collaborate?
-            </h3>
-            <p className="text-gray-600 mb-6">
-              Join our network of strategic partners and help us build Africa's future through ethical finance and sustainable infrastructure.
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                to="/partnerships" 
-                className="group inline-flex items-center gap-3 bg-gradient-to-r from-primary-blue to-primary-dark text-white font-semibold px-8 py-4 rounded-2xl hover:shadow-xl transition-all duration-300 transform hover:scale-105"
-              >
-                <span>Partner With Us</span>
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
-              </Link>
-              
-              <Link 
-                to="/contact" 
-                className="group inline-flex items-center gap-3 bg-white border border-primary-blue text-primary-blue font-semibold px-8 py-4 rounded-2xl hover:bg-primary-blue hover:text-white hover:shadow-xl transition-all duration-300 transform hover:scale-105"
-              >
-                <span>Contact Our Team</span>
-              </Link>
-            </div>
-          </div>
-        </motion.div>
+        
       </div>
     </section>
   )

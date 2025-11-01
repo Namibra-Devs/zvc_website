@@ -42,7 +42,7 @@ const Services = () => {
           />
 
           {/* Glassy Text Box */}
-          {/* <div className="absolute bottom-6 left-6 right-6 bg-primary-blue/20 backdrop-blur-sm border border-white/20 rounded-2xl p-6 shadow-lg">
+          <div className="absolute bottom-6 left-6 right-6 bg-primary-blue/20 backdrop-blur-sm border border-white/20 rounded-2xl p-6 shadow-lg">
             <h3 className="text-3xl md:text-4xl font-extrabold text-blue drop-shadow-lg mb-3 tracking-tight">
               <span className="bg-gradient-to-r from-primary-gold via-white to-primary-gold bg-clip-text text-transparent">
                 Islamic Finance Redefined
@@ -52,7 +52,7 @@ const Services = () => {
               Driving Africa’s economic transformation through ethical,
               sustainable, and innovative Islamic financial solutions.
             </p>
-          </div> */}
+          </div>
         </motion.div>
 
         {/* RIGHT SIDE — Services Cards */}
