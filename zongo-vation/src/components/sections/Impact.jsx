@@ -246,29 +246,7 @@ const Impact = () => {
               </div>
             </motion.div>
 
-            {/* Live Stats Panel */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              className="grid grid-cols-2 gap-4 mt-6"
-            >
-              {IMPACT_METRICS.map((metric, index) => (
-                <div
-                  key={index}
-                  className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-4 text-center hover:bg-white/15 transition-all duration-300"
-                >
-                  <div className="text-2xl font-bold text-primary-gold mb-1">
-                    <Counter
-                      end={metric.value}
-                      prefix={metric.prefix}
-                      suffix={metric.suffix}
-                    />
-                  </div>
-                  <div className="text-white/70 text-xs">{metric.label}</div>
-                </div>
-              ))}
-            </motion.div>
+            
 
             {/* Call to Action */}
             <motion.div

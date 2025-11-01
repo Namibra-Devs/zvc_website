@@ -140,66 +140,66 @@ const Partnerships = () => {
           ))}
         </motion.div>
 
-        {/* Infinite Partners Slider */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.5 }}
-          className="mb-16"
-        >
-          <div className="relative">
-            {/* Slider Container */}
-            <div className="flex overflow-hidden py-8">
-              <motion.div
-                className="flex gap-8"
-                animate={{
-                  x: [0, -1920], // Adjust based on total width
+       {/* Infinite Partners Slider */}
+<motion.div
+  initial={{ opacity: 0, y: 30 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.8, delay: 0.5 }}
+  className="mb-16"
+>
+  <div className="relative">
+    {/* Slider Container */}
+    <div className="flex overflow-hidden py-8">
+      <motion.div
+        className="flex gap-8"
+        animate={{
+          x: [0, -1920], // Adjust based on total width
+        }}
+        transition={{
+          x: {
+            repeat: Infinity,
+            repeatType: "loop",
+            duration: 40,
+            ease: "linear",
+          },
+        }}
+      >
+        {duplicatedPartners.map((partner, index) => (
+          <div
+            key={`${partner}-${index}`}
+            className="flex-shrink-0 w-64 h-40 bg-white border border-gray-200 rounded-2xl p-2 hover:shadow-2xl hover:border-primary-blue/30 transition-all duration-500 flex items-center justify-center group"
+          >
+            {/* Partner Logo Image */}
+            <div className="relative w-full h-full flex items-center justify-center overflow-hidden rounded-xl">
+              <img
+                src={partnerImages[index % partnerImages.length]}
+                alt={partner}
+                className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
+                onError={(e) => {
+                  // Fallback to text if image fails to load
+                  e.target.style.display = 'none';
+                  const fallback = e.target.nextSibling;
+                  if (fallback) fallback.style.display = 'block';
                 }}
-                transition={{
-                  x: {
-                    repeat: Infinity,
-                    repeatType: "loop",
-                    duration: 40,
-                    ease: "linear",
-                  },
-                }}
+              />
+              {/* Fallback Text */}
+              <div 
+                className="hidden text-primary-blue font-semibold text-base text-center"
+                style={{ display: 'none' }}
               >
-                {duplicatedPartners.map((partner, index) => (
-                  <div
-                    key={`${partner}-${index}`}
-                    className="flex-shrink-0 w-58 h-34 bg-white border border-gray-200 rounded-2xl p-4 hover:shadow-xl hover:border-primary-blue/30 transition-all duration-500 flex items-center justify-center group"
-                  >
-                    {/* Partner Logo Image */}
-                    <div className="relative w-full h-full flex items-center justify-center">
-                      <img
-                        src={partnerImages[index % partnerImages.length]}
-                        alt={partner}
-                        className="max-w-full max-h-12 object-cover group-hover:scale-110 transition-all duration-300"
-                        onError={(e) => {
-                          // Fallback to text if image fails to load
-                          e.target.style.display = 'none';
-                          const fallback = e.target.nextSibling;
-                          if (fallback) fallback.style.display = 'block';
-                        }}
-                      />
-                      {/* Fallback Text */}
-                      <div 
-                        className="hidden text-primary-blue font-semibold text-sm text-center"
-                        style={{ display: 'none' }}
-                      >
-                        {partner.split(' ')[0]}
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </motion.div>
+                {partner.split(' ')[0]}
+              </div>
             </div>
-
-            {/* Gradient Overlays for Smooth Edges */}
-            <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-white to-transparent z-10" />
-            <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-white to-transparent z-10" />
           </div>
-        </motion.div>
+        ))}
+      </motion.div>
+    </div>
+
+    {/* Gradient Overlays for Smooth Edges */}
+    <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-white to-transparent z-10" />
+    <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-white to-transparent z-10" />
+  </div>
+</motion.div>
 
       
 
