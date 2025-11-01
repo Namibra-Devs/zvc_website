@@ -57,7 +57,7 @@ const Contact = () => {
   ];
 
   return (
-    <section className="section-padding bg-white">
+    <section className="section-padding bg-white pb-8">
       <div className="container-custom">
         {/* Header */}
         <motion.div
