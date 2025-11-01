@@ -162,30 +162,7 @@ const Hero = () => {
             </Link>
           </motion.div>
 
-          {/* Stats Bar */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 1.2 }}
-            className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-12"
-          >
-            {[
-              { number: '$1M+', label: 'Capital to Mobilize' },
-              { number: '1K+', label: 'Homes to Build' },
-              { number: '3K+', label: 'Jobs to Create' },
-              { number: '100%', label: 'Shariah Compliant' }
-            ].map((stat, index) => (
-              <div 
-                key={index}
-                className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-4 text-center hover:bg-white/10 transition-all duration-300"
-              >
-                <div className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-primary-gold to-yellow-200 bg-clip-text text-transparent">
-                  {stat.number}
-                </div>
-                <div className="text-sm text-white/70 mt-1">{stat.label}</div>
-              </div>
-            ))}
-          </motion.div>
+          
 
           
         </motion.div>

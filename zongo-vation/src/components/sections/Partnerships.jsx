@@ -45,6 +45,21 @@ const Partnerships = () => {
     }
   ]
 
+  // Partner images mapping - replace with your actual image filenames
+  const partnerImages = [
+    "/images/gh1.png",
+    "/images/partners/isdb.png",
+    "/images/partners/badea.png",
+    "/images/partners/iciec.png",
+    "/images/partners/afc.png",
+    "/images/partners/afdb.png",
+    "/images/partners/gipc.png",
+    "/images/partners/islamic-finance.png"
+  ]
+
+  // Create duplicated array for seamless infinite scroll
+  const duplicatedPartners = [...PARTNERS, ...PARTNERS]
+
   return (
     <section className="section-padding bg-gradient-to-br from-white to-gray-50 relative overflow-hidden">
       {/* Background Elements */}
@@ -125,33 +140,68 @@ const Partnerships = () => {
           ))}
         </motion.div>
 
-        {/* Partners Grid - Enhanced */}
+        {/* Infinite Partners Slider */}
         <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.5 }}
-          className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mb-16"
+          className="mb-16"
         >
-          {PARTNERS.map((partner, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.6, delay: 0.6 + index * 0.05 }}
-              whileHover={{ scale: 1.05 }}
-              className="group"
-            >
-              <div className="bg-white border border-gray-200 rounded-2xl p-6 text-center hover:shadow-xl hover:border-primary-blue/30 transition-all duration-500 h-full flex items-center justify-center">
-                <div className="font-semibold text-primary-blue text-sm group-hover:text-primary-dark transition-colors duration-300">
-                  {partner}
-                </div>
-                
-                {/* Hover Effect */}
-                <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-primary-blue/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-              </div>
-            </motion.div>
-          ))}
+          <div className="relative">
+            {/* Slider Container */}
+            <div className="flex overflow-hidden py-8">
+              <motion.div
+                className="flex gap-8"
+                animate={{
+                  x: [0, -1920], // Adjust based on total width
+                }}
+                transition={{
+                  x: {
+                    repeat: Infinity,
+                    repeatType: "loop",
+                    duration: 40,
+                    ease: "linear",
+                  },
+                }}
+              >
+                {duplicatedPartners.map((partner, index) => (
+                  <div
+                    key={`${partner}-${index}`}
+                    className="flex-shrink-0 w-58 h-34 bg-white border border-gray-200 rounded-2xl p-4 hover:shadow-xl hover:border-primary-blue/30 transition-all duration-500 flex items-center justify-center group"
+                  >
+                    {/* Partner Logo Image */}
+                    <div className="relative w-full h-full flex items-center justify-center">
+                      <img
+                        src={partnerImages[index % partnerImages.length]}
+                        alt={partner}
+                        className="max-w-full max-h-12 object-contain opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300"
+                        onError={(e) => {
+                          // Fallback to text if image fails to load
+                          e.target.style.display = 'none';
+                          const fallback = e.target.nextSibling;
+                          if (fallback) fallback.style.display = 'block';
+                        }}
+                      />
+                      {/* Fallback Text */}
+                      <div 
+                        className="hidden text-primary-blue font-semibold text-sm text-center"
+                        style={{ display: 'none' }}
+                      >
+                        {partner.split(' ')[0]}
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </motion.div>
+            </div>
+
+            {/* Gradient Overlays for Smooth Edges */}
+            <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-white to-transparent z-10" />
+            <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-white to-transparent z-10" />
+          </div>
         </motion.div>
+
+      
 
         {/* Partnership Benefits */}
         <motion.div

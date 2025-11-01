@@ -65,32 +65,7 @@ const Services = () => {
           </motion.p>
         </motion.div>
 
-        {/* Stats Bar */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          className="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-16"
-        >
-          {stats.map((stat, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, scale: 0.8 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.6, delay: 0.5 + index * 0.1 }}
-              whileHover={{ scale: 1.05, y: -5 }}
-              className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-6 text-center group hover:bg-white/15 hover:border-white/30 transition-all duration-500"
-            >
-              <div className="flex flex-col items-center">
-                <div className="p-3 bg-primary-gold/20 rounded-2xl mb-3 group-hover:scale-110 transition-transform duration-300">
-                  <stat.icon className="w-6 h-6 text-primary-gold" />
-                </div>
-                <div className="text-2xl md:text-3xl font-bold text-white mb-1">{stat.number}</div>
-                <div className="text-white/70 text-sm">{stat.label}</div>
-              </div>
-            </motion.div>
-          ))}
-        </motion.div>
+        
 
         {/* Services Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">

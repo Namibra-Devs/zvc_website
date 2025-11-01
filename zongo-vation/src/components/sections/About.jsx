@@ -151,30 +151,7 @@ const About = () => {
               </div>
             </motion.div>
 
-            {/* Stats Grid */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.6 }}
-              className="grid grid-cols-2 gap-4"
-            >
-              {stats.map((stat, index) => (
-                <div
-                  key={index}
-                  className="bg-white rounded-xl p-4 border border-gray-200 shadow-sm hover:shadow-md transition-all duration-300 group hover:border-primary-blue/20"
-                >
-                  <div className="flex items-center gap-3">
-                    <div className="p-2 bg-primary-blue/10 rounded-lg group-hover:scale-110 transition-transform duration-300">
-                      <stat.icon className="w-4 h-4 text-primary-blue" />
-                    </div>
-                    <div>
-                      <div className="text-2xl font-bold text-primary-blue">{stat.number}</div>
-                      <div className="text-sm text-gray-600">{stat.label}</div>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </motion.div>
+           
 
             {/* Enhanced CTA Button */}
             <motion.div
