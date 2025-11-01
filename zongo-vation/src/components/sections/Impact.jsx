@@ -45,15 +45,7 @@ const Impact = () => {
       color: "from-amber-500 to-orange-600",
       stats: "10K+ Jobs Created",
     },
-    {
-      year: "2027",
-      title: "Shariah Compliance",
-      description:
-        "Maintaining 100% Shariah compliance across all financial products",
-      icon: Target,
-      color: "from-purple-500 to-pink-600",
-      stats: "100% Compliant",
-    },
+   
     {
       year: "2030",
       title: "Sustainable Impact",
