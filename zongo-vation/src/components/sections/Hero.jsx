@@ -51,6 +51,8 @@ const Hero = () => {
           muted
           loop
           playsInline
+          preload="auto"
+  controls={false}
           onLoadedData={handleVideoLoad}
           className={`w-full h-full object-cover transition-opacity duration-1000 ${
             isVideoLoaded ? 'opacity-100' : 'opacity-0'
