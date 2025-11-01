@@ -74,7 +74,7 @@ const About = () => {
               <span className="text-primary-gold font-medium">Since 2020</span>
             </motion.div>
 
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-3 leading-tight">
+            <h1 className="text-3xl md:text-7xl font-bold text-white mb-3 leading-tight">
               Pioneering Islamic 
               <span className="text-primary-gold"> Finance</span> <br />
               in Africa
