@@ -183,10 +183,10 @@ const About = () => {
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
-            className="relative rounded-3xl overflow-hidden shadow-2xl"
+            className="relative rounded-3xl overflow-hidden shadow-xl"
           >
             <img
-              src="/images/about-hero.jpg"
+              src="/images/about.jpg"
               alt="ZongoVation Capital"
               className="w-full h-full object-cover rounded-3xl"
             />

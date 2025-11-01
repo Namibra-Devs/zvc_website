@@ -36,14 +36,14 @@ const Services = () => {
           className="relative flex-1 rounded-3xl overflow-hidden shadow-2xl"
         >
           <img
-            src="/images/services-hero.jpg"
+            src="/images/service1.jpg"
             alt="Our Services"
             className="w-full h-full object-cover rounded-3xl"
           />
 
           {/* Glassy Text Box */}
-          <div className="absolute bottom-6 left-6 right-6 bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-6 shadow-lg">
-            <h3 className="text-3xl md:text-4xl font-extrabold text-white drop-shadow-lg mb-3 tracking-tight">
+          {/* <div className="absolute bottom-6 left-6 right-6 bg-primary-blue/20 backdrop-blur-sm border border-white/20 rounded-2xl p-6 shadow-lg">
+            <h3 className="text-3xl md:text-4xl font-extrabold text-blue drop-shadow-lg mb-3 tracking-tight">
               <span className="bg-gradient-to-r from-primary-gold via-white to-primary-gold bg-clip-text text-transparent">
                 Islamic Finance Redefined
               </span>
@@ -52,7 +52,7 @@ const Services = () => {
               Driving Africa’s economic transformation through ethical,
               sustainable, and innovative Islamic financial solutions.
             </p>
-          </div>
+          </div> */}
         </motion.div>
 
         {/* RIGHT SIDE — Services Cards */}
