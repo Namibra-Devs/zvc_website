@@ -48,13 +48,13 @@ const Partnerships = () => {
   // Partner images mapping - replace with your actual image filenames
   const partnerImages = [
     "/images/gh1.png",
-    "/images/partners/isdb.png",
-    "/images/partners/badea.png",
-    "/images/partners/iciec.png",
-    "/images/partners/afc.png",
-    "/images/partners/afdb.png",
-    "/images/partners/gipc.png",
-    "/images/partners/islamic-finance.png"
+    "/images/isdb1.png",
+    "/images/badea2.png",
+    "/images/iciec1.jpg",
+    "/images/afc1.jpg",
+    "/images/adb1.jpg",
+    "/images/gipc2.jpeg",
+    "/images/zongo-logo1.PNG"
   ]
 
   // Create duplicated array for seamless infinite scroll
@@ -174,7 +174,7 @@ const Partnerships = () => {
                       <img
                         src={partnerImages[index % partnerImages.length]}
                         alt={partner}
-                        className="max-w-full max-h-12 object-contain opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300"
+                        className="max-w-full max-h-12 object-cover group-hover:scale-110 transition-all duration-300"
                         onError={(e) => {
                           // Fallback to text if image fails to load
                           e.target.style.display = 'none';
