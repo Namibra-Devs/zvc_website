@@ -1,30 +1,30 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import { motion } from 'framer-motion'
-import { 
-  MapPin, 
-  Mail, 
-  Phone, 
+import React from "react";
+import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
+import {
+  MapPin,
+  Mail,
+  Phone,
   ArrowRight,
   Building,
   Users,
   FolderOpen,
   Briefcase,
   TrendingUp,
-  Handshake
-} from 'lucide-react'
-import Logo from '@components/shared/Logo'
-import SocialLinks from '@components/shared/SocialLinks'
+  Handshake,
+} from "lucide-react";
+
+import SocialLinks from "@components/shared/SocialLinks";
 
 const Footer = () => {
   const quickLinks = [
-    { path: '/about', label: 'About', icon: Users },
-    { path: '/projects', label: 'Projects', icon: FolderOpen },
-    { path: '/services', label: 'Services', icon: Briefcase },
-    { path: '/investors', label: 'Investors', icon: TrendingUp },
-    { path: '/partnerships', label: 'Partnerships', icon: Handshake },
-    { path: '/contact', label: 'Contact', icon: Building }
-  ]
+    { path: "/about", label: "About", icon: Users },
+    { path: "/projects", label: "Projects", icon: FolderOpen },
+    { path: "/services", label: "Services", icon: Briefcase },
+    { path: "/investors", label: "Investors", icon: TrendingUp },
+    { path: "/partnerships", label: "Partnerships", icon: Handshake },
+    { path: "/contact", label: "Contact", icon: Building },
+  ];
 
   return (
     <footer className="bg-gradient-to-br from-primary-dark via-primary-blue to-primary-dark relative overflow-hidden">
@@ -42,14 +42,19 @@ const Footer = () => {
             whileInView={{ opacity: 1, y: 0 }}
             className="lg:col-span-2"
           >
-            <Logo light />
+            <img
+              src="images/zongo-logo1.PNG"
+              alt="ZongoVation Capital"
+              className="w-30 h-30 object-contain bg-white rounded-full"
+            />
             <p className="mt-4 text-xl text-white/90 leading-relaxed">
-              Building Africa's Future through <span className="text-primary-gold">Ethical Finance</span>
+              Building Africa's Future through{" "}
+              <span className="text-primary-gold">Ethical Finance</span>
             </p>
             <p className="mt-2 text-primary-gold font-semibold">
               Prosperity with Purpose
             </p>
-            
+
             {/* Social Links with Enhanced Styling */}
             <div className="mt-8">
               <p className="text-white/70 text-sm mb-4">Follow our journey</p>
@@ -75,7 +80,7 @@ const Footer = () => {
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.2 + index * 0.05 }}
                 >
-                  <Link 
+                  <Link
                     to={link.path}
                     className="flex items-center gap-3 text-white/80 hover:text-primary-gold hover:translate-x-2 transition-all duration-300 group"
                   >
@@ -93,7 +98,9 @@ const Footer = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
           >
-            <h3 className="text-lg font-semibold text-white mb-6">Get In Touch</h3>
+            <h3 className="text-lg font-semibold text-white mb-6">
+              Get In Touch
+            </h3>
             <div className="space-y-4">
               <motion.div
                 initial={{ opacity: 0, y: 10 }}
@@ -116,7 +123,9 @@ const Footer = () => {
               >
                 <Mail className="w-5 h-5 text-primary-gold mt-0.5 flex-shrink-0" />
                 <div>
-                  <p className="text-white font-medium">partnership@zongovationcapital.com</p>
+                  <p className="text-white font-medium">
+                    partnership@zongovationcapital.com
+                  </p>
                   <p className="text-white/70 text-sm">General inquiries</p>
                 </div>
               </motion.div>
@@ -168,15 +177,24 @@ const Footer = () => {
             <div className="text-white/60 text-sm">
               <p>© 2025 ZongoVation Capital Ltd. All rights reserved.</p>
             </div>
-            
+
             <div className="flex gap-6 text-white/60 text-sm">
-              <Link to="/privacy" className="hover:text-primary-gold transition-colors">
+              <Link
+                to="/privacy"
+                className="hover:text-primary-gold transition-colors"
+              >
                 Privacy Policy
               </Link>
-              <Link to="/terms" className="hover:text-primary-gold transition-colors">
+              <Link
+                to="/terms"
+                className="hover:text-primary-gold transition-colors"
+              >
                 Terms of Service
               </Link>
-              <Link to="/disclaimer" className="hover:text-primary-gold transition-colors">
+              <Link
+                to="/disclaimer"
+                className="hover:text-primary-gold transition-colors"
+              >
                 Disclaimer
               </Link>
             </div>
@@ -184,7 +202,7 @@ const Footer = () => {
         </motion.div>
       </div>
     </footer>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;
