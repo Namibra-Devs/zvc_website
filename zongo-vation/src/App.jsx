@@ -1,6 +1,7 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Layout from '@components/layout/Layout';
+import ScrollToTop from '@components/ScrollToTop'; // Add this
 import Home from '@pages/Home';
 import About from '@pages/About';
 import Projects from '@pages/Projects';
@@ -12,6 +13,7 @@ import Contact from '@pages/Contact';
 function App() {
   return (
     <Layout>
+      <ScrollToTop /> {/* Add this line */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
