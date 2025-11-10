@@ -394,17 +394,13 @@ const Projects = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <button
-                onClick={() =>
-                  document
-                    .querySelector("#contact")
-                    ?.scrollIntoView({ behavior: "smooth" })
-                }
-                className="btn-secondary flex gap-3 cursor-pointer"
-              >
-                <Users className="w-5 h-5" />
-                Get In Touch
-              </button>
+               <Link 
+    to="/contact" 
+    className="btn-secondary flex gap-3 cursor-pointer"
+  >
+    <Users className="w-5 h-5" />
+  Get In Touch
+  </Link>
             </div>
           </motion.div>
         </div>

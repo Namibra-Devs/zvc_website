@@ -40,7 +40,7 @@ const About = () => {
   ];
 
   const stats = [
-    { number: "5+", label: "Years Experience", icon: TrendingUp },
+    
     { number: "$1M+", label: "Capital Target", icon: Target },
     { number: "13+", label: "Projects Pipeline", icon: Building },
     { number: "6+", label: "Countries Served", icon: Users },

@@ -270,14 +270,14 @@ const Partnerships = () => {
           </motion.div>
 
           {/* Infinite Partners Slider */}
-          <motion.div
+          {/* <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.5 }}
             className="mb-16"
           >
             <div className="relative">
-              {/* Slider Container */}
+              
               <div className="flex overflow-hidden py-8">
                 <motion.div
                   className="flex gap-8"
@@ -298,7 +298,7 @@ const Partnerships = () => {
                       key={`${partner}-${index}`}
                       className="flex-shrink-0 w-64 h-40 bg-white/5 backdrop-blur-lg border border-white/10 rounded-2xl p-2 hover:shadow-2xl hover:border-primary-gold/30 transition-all duration-500 flex items-center justify-center group"
                     >
-                      {/* Partner Logo Image */}
+                      
                       <div className="relative w-full h-full flex items-center justify-center overflow-hidden rounded-xl">
                         <img
                           src={partnerImages[index % partnerImages.length]}
@@ -310,7 +310,7 @@ const Partnerships = () => {
                             if (fallback) fallback.style.display = 'block';
                           }}
                         />
-                        {/* Fallback Text */}
+                     
                         <div 
                           className="hidden text-white font-semibold text-base text-center"
                           style={{ display: 'none' }}
@@ -323,11 +323,11 @@ const Partnerships = () => {
                 </motion.div>
               </div>
 
-              {/* Gradient Overlays for Smooth Edges */}
+          
               <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-primary-blue to-transparent z-10" />
               <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-primary-dark to-transparent z-10" />
             </div>
-          </motion.div>
+          </motion.div> */}
 
           {/* Partnership Benefits */}
           <motion.div

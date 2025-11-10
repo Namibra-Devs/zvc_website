@@ -20,7 +20,7 @@ const Impact = () => {
 
   const timelineData = [
     {
-      year: "2024",
+      year: "2025",
       title: "Capital Mobilization",
       description:
         "Launching $1B ethical capital mobilization for African infrastructure",
@@ -29,7 +29,7 @@ const Impact = () => {
       stats: "$1M+ Capital Target",
     },
     {
-      year: "2025",
+      year: "2026",
       title: "Housing Development",
       description: "20,000 affordable homes under construction across Ghana",
       icon: Home,
@@ -37,7 +37,7 @@ const Impact = () => {
       stats: "20K Homes Planned",
     },
     {
-      year: "2026",
+      year: "2028",
       title: "Job Creation",
       description:
         "Creating 10,000+ jobs through sustainable infrastructure projects",

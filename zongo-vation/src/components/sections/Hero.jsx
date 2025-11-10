@@ -106,7 +106,7 @@ const Hero = () => {
             transition={{ duration: 1, delay: 0.6 }}
             className="text-xl md:text-2xl lg:text-3xl mb-4 max-w-4xl mx-auto font-light leading-relaxed ms-4 lg:ms-0"
           >
-            Through <span className="bg-gradient-to-r from-primary-gold to-yellow-200 bg-clip-text text-transparent font-semibold">Ethical Islamic Finance</span> and Sustainable Infrastructure Development
+            Through <span className="bg-gradient-to-r from-primary-gold to-yellow-200 bg-clip-text text-transparent font-semibold"> Islamic Finance</span> and Sustainable Infrastructure Development
           </motion.p>
 
           {/* Description */}

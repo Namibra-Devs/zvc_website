@@ -1,7 +1,7 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import { Building2, Target, Eye, Users, Shield, Lightbulb, Heart, Star, Download, Mail, Award, Globe } from 'lucide-react'
-
+import { Link } from 'react-router-dom';
 const About = () => {
   const values = [
     {
@@ -71,7 +71,7 @@ const About = () => {
               className="inline-flex items-center gap-3 px-6 py-3 glass rounded-full border border-primary-gold/30 mb-8"
             >
               <Award className="w-5 h-5 text-primary-gold" />
-              <span className="text-primary-gold font-medium">Since 2020</span>
+              <span className="text-primary-gold font-medium">Since 2025</span>
             </motion.div>
 
             <h1 className="text-3xl md:text-7xl font-bold text-white mb-3 leading-tight">
@@ -89,20 +89,21 @@ const About = () => {
               Bridging ethical capital from the Middle East and Asia with Africa's development priorities through Shariah-compliant solutions.
             </motion.p>
 
-            {/* CTA Buttons */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.6 }}
-              className="flex flex-col sm:flex-row gap-4 justify-center mt-12"
-            >
-             
-              
-              <button className="btn-secondary flex gap-3 cursor-pointer">
-                <Mail className="w-5 h-5" />
-                Contact Us
-              </button>
-            </motion.div>
+         {/* CTA Buttons */}
+<motion.div
+  initial={{ opacity: 0, y: 30 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ delay: 0.6 }}
+  className="flex flex-col sm:flex-row gap-4 justify-center mt-12"
+>
+  <Link 
+    to="/contact" 
+    className="btn-secondary flex gap-3 cursor-pointer"
+  >
+    <Mail className="w-5 h-5" />
+    Contact Us
+  </Link>
+</motion.div>
           </motion.div>
         </div>
 
@@ -216,7 +217,7 @@ const About = () => {
                 transition={{ delay: 1 }}
                 className="absolute -bottom-6 -left-6 bg-white rounded-2xl p-6 shadow-2xl border border-primary-gold/20"
               >
-                <div className="text-3xl font-bold text-primary-emerald mb-2">5+</div>
+                <div className="text-3xl font-bold text-primary-emerald mb-2">1+</div>
                 <div className="text-sm text-primary-blue font-medium">Years of Excellence</div>
               </motion.div>
 
