@@ -26,7 +26,7 @@ const Impact = () => {
         "Launching $1B ethical capital mobilization for African infrastructure",
       icon: TrendingUp,
       color: "from-cyan-500 to-blue-600",
-      stats: "$1M+ Capital Target",
+      stats: "$1B+ Capital Target",
     },
     {
       year: "2026",

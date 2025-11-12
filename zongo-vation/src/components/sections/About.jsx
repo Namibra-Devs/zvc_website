@@ -194,7 +194,7 @@ const About = () => {
         </motion.div>
 
         {/* Stats Section Below Image */}
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
@@ -220,7 +220,7 @@ const About = () => {
               </motion.div>
             );
           })}
-        </motion.div>
+        </motion.div> */}
 
         {/* Feature Cards (below stats) */}
         <motion.div

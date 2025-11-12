@@ -9,7 +9,7 @@ const Projects = () => {
     description: "A landmark initiative developed by ZongoVation Capital in partnership with the Government of Ghana to address the country's 1.8 million-unit housing deficit using Shariah-compliant, project-tied financing.",
     metrics: [
       { icon: TrendingUp, value: "USD 1 Billion", label: "Programme Size", gradient: "from-cyan-500 to-blue-600" },
-      { icon: Home, value: "5,000", label: "Affordable Homes", gradient: "from-emerald-500 to-green-600" },
+      { icon: Home, value: "20,000", label: "Affordable Homes", gradient: "from-emerald-500 to-green-600" },
       { icon: Users, value: "10,000+", label: "Jobs Created", gradient: "from-amber-500 to-orange-600" },
       { icon: TrendingUp, value: "6.5-7.0%", label: "Expected Returns", gradient: "from-purple-500 to-pink-600" }
     ]

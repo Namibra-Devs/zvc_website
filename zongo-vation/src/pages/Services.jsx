@@ -93,7 +93,7 @@ const Services = () => {
       </section>
 
       {/* Stats Section - Light */}
-      <section className="section-padding bg-white py-8">
+      {/* <section className="section-padding bg-white py-8">
         <div className="container-custom">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -119,7 +119,7 @@ const Services = () => {
             ))}
           </motion.div>
         </div>
-      </section>
+      </section> */}
 
       {/* Services Grid - Blue Black Section - FIXED */}
       <section className="section-padding bg-gradient-to-br from-primary-blue to-primary-dark py-8">
